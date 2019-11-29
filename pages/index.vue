@@ -44,7 +44,7 @@
             <h1>Conoce a nuestros speakers!!</h1>
           </template>
         </VEPresenters>
-        <VETweetTimeline profile="cotufa82">
+        <VETweetTimeline profile="DevGuacamaya">
           <template #header>
             <h1>ALGO AQUI</h1>
             <h2>Que dice la gente!</h2>
