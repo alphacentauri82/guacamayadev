@@ -1,6 +1,6 @@
-# Guacamaya.Dev -- #Devs4Venezuela
-
-Devs from & for 🇻🇪
+# Guacamaya.Dev -- OLD SITE
+Concepto original cambio a podcast
+ 🇻🇪
 
 ## Build Setup
 
