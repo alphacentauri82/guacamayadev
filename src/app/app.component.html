@@ -1,0 +1,19 @@
+<header>
+ <mat-toolbar color="primary">
+  <h1>Guacamaya Site</h1>
+  <span class="fill"></span>
+  <button mat-button routerLink="/">Home</button>
+  <button mat-button routerLink="/about">About</button>
+  <button mat-button routerLink="/videos">Videos</button>
+  <button mat-button routerLink="/sponsors">Sponsors</button>
+  <button mat-button routerLink="/contact-us">Contact Us</button>
+ </mat-toolbar>
+</header>
+<div class="main-container">
+ <router-outlet></router-outlet>
+</div>
+<footer>
+ <mat-toolbar color="primary">
+  <p>Made with love by CodeON</p>
+ </mat-toolbar>
+</footer>
