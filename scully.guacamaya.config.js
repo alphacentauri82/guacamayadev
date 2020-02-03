@@ -1,5 +1,5 @@
 exports.config = {
-  projectRoot: "./src",
+  projectRoot: "./src/app",
   projectName: "guacamaya",
   outDir: './dist/static',
   routes: {
