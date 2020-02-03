@@ -10,6 +10,7 @@ import { map } from 'rxjs/operators';
 export class AppComponent {
   title = 'guacamaya';
   //Sort elements by orders
+  //Here you can filter the links by some pattern
   links$ = this.routerService.available$.pipe(
     map(routeList => routeList.sort((a, b) => a.order - b.order))
   );
