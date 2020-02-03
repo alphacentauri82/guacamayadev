@@ -1,19 +1,17 @@
 <header>
- <mat-toolbar color="primary">
-  <h1>Guacamaya Site</h1>
-  <span class="fill"></span>
-  <button mat-button routerLink="/">Home</button>
-  <button mat-button routerLink="/about">About</button>
-  <button mat-button routerLink="/videos">Videos</button>
-  <button mat-button routerLink="/sponsors">Sponsors</button>
-  <button mat-button routerLink="/contact-us">Contact Us</button>
- </mat-toolbar>
-</header>
-<div class="main-container">
- <router-outlet></router-outlet>
-</div>
-<footer>
- <mat-toolbar color="primary">
-  <p>Made with love by CodeON</p>
- </mat-toolbar>
-</footer>
+  <mat-toolbar color="primary">
+   <h1>Guacamaya Site</h1>
+   <span class="fill"></span>
+   <div class="menu-element" *ngFor="let route of routerService.available$ | async ">
+    <a mat-button [href]="route.route">{{route.title}}</a>
+   </div>
+  </mat-toolbar>
+ </header>
+ <div class="main-container">
+  <router-outlet></router-outlet>
+ </div>
+ <footer>
+  <mat-toolbar color="primary">
+   <p>Made with <mat-icon aria-hidden="false" aria-label="love">favorite</mat-icon> by CodeON</p>
+  </mat-toolbar>
+ </footer>
