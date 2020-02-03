@@ -2,7 +2,7 @@
   <mat-toolbar color="primary">
    <h1>Guacamaya Site</h1>
    <span class="fill"></span>
-   <div class="menu-element" *ngFor="let route of routerService.available$ | async ">
+   <div class="menu-element" *ngFor="let route of links$ | async ">
     <a mat-button [href]="route.route">{{route.title}}</a>
    </div>
   </mat-toolbar>
