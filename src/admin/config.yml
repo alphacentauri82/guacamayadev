@@ -1,6 +1,7 @@
 backend:
-  name: git-gateway
+  name: gitlab
   branch: master
+  repo: rm82dc/guacamayadev
 
 media_folder: 'src/assets/images/uploads'
 public_folder: 'assets/images/uploads'
