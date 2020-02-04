@@ -3,6 +3,7 @@ title: About
 description: blog description
 publish: false
 order: 2
+name: about
 ---
 
 # About

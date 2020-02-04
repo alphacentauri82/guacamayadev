@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { ScullyRoutesService } from '@scullyio/ng-lib'
 import { map } from 'rxjs/operators';
 import { useAnimation, transition, trigger, style, animate, state } from '@angular/animations';
-import { transAnimation } from './animations';
 
 @Component({
   selector: 'app-root',

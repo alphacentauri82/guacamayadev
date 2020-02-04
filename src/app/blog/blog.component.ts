@@ -16,4 +16,5 @@ export class BlogComponent implements OnInit {
 
   constructor(private router: Router, private route: ActivatedRoute) {
   }
+
 }

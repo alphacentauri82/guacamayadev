@@ -7,22 +7,30 @@ media_folder: 'src/assets/images/uploads'
 public_folder: 'assets/images/uploads'
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'blog'
-    create: true
+#  - name: 'blog'
+#    label: 'Blog'
+#    folder: 'blog'
+#    create: true
+#    fields:
+#      - { label: 'Title', name: 'title', widget: 'string', required: false }
+#      - {
+#          label: 'Description',
+#          name: 'description',
+#          widget: 'text',
+#          required: false,
+#        }
+#      - {
+#          label: 'Publish',
+#          name: 'publish',
+#          widget: 'boolean',
+#          required: false,
+#        }
+#      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'pages'
+    label: 'Pages'
+    files: 'pages/index.md',
     fields:
-      - { label: 'Title', name: 'title', widget: 'string', required: false }
-      - {
-          label: 'Description',
-          name: 'description',
-          widget: 'text',
-          required: false,
-        }
-      - {
-          label: 'Publish',
-          name: 'publish',
-          widget: 'boolean',
-          required: false,
-        }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {label: Title, name: title, widget: string}
+      - {label: Image, name: image, widget: image}
+      - {label: Heading, name: heading, widget: string}
+      - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}]}
