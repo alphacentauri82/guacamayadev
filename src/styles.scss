@@ -2,3 +2,23 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import '~@angular/material/_theming';
+@include mat-core();
+
+/* Primary Theme */
+$guacamaya-app-primary: mat-palette($mat-blue-grey, 800);
+$guacamaya-app-accent:  mat-palette($mat-pink, 500, 900, A100);
+$guacamaya-app-warn:    mat-palette($mat-deep-orange);
+
+$guacamaya-dark-primary: mat-palette($mat-blue-grey, 800);
+$guacamaya-dark-accent:  mat-palette($mat-amber, A200, A100, A400);
+$guacamaya-dark-warn:    mat-palette($mat-deep-orange);
+
+$guacamaya-app-theme: mat-light-theme($guacamaya-app-primary, $guacamaya-app-accent, $guacamaya-app-warn);
+$guacamaya-dark-app-theme: mat-dark-theme($guacamaya-dark-primary, $guacamaya-dark-accent, $guacamaya-dark-warn);
+
+
+/* Dark Theme */
+
+@include angular-material-theme($guacamaya-dark-app-theme);

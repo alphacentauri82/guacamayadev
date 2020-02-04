@@ -6,9 +6,36 @@
     width:80%;
     margin:auto;
     margin-top:30px;
+    opacity: 0;
 }
 :host {
     display:flex;
     flex-direction:column;
     min-height:100vh;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("../assets/guacamaya-logo-h.png");
+  
+    /* Set a specific height */
+    height: 300px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    /*background-size: cover;*/
+    background-color: #37474f;
+
+}
+
+mat-toolbar.nav-bar{
+    /*background:#37474f00;*/
+    position: fixed;
+}
+
+header{
+    background-color: #37474f;
 }
