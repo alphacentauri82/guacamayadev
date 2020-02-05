@@ -23,5 +23,12 @@ intro:
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
     non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   heading: Resume
+sponsors: []
+twitter_feeds:
+  link: 'https://twitter.com/DevGuacamaya'
+  section_name: Twitter Feeds
+episodes:
+  channel: 'https://www.youtube.com/channel/UC68u1qvt1B0SkF-q1EgP88Q'
+  section_name: Episodes
 ---
 
