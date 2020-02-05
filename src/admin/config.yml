@@ -41,3 +41,6 @@ collections:
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}
           - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}]}
+          - {label: Sponsors, name: sponsors, widget: list, fields: [{label: Name, name: sponsor_name, widget: string}, {label: Image, name: sponsor_image, widget: image}]}
+          - {label: Twitter Feeds, name: twitter_feeds, widget: object, fields: [{label: Section Name, name: section_name, widget: string}, {label: Link, name: link, widget: string}]}
+          - {label: Youtube Episodes, name: episodes, widget: object, fields: [{label: Section Name, name: section_name, widget: string}, {label: Channel url, name: channel, widget: string}]}
