@@ -28,9 +28,16 @@ collections:
 #      - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'pages'
     label: 'Pages'
-    files: 'pages/index.md',
-    fields:
-      - {label: Title, name: title, widget: string}
-      - {label: Image, name: image, widget: image}
-      - {label: Heading, name: heading, widget: string}
-      - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}]}
+    files:
+      - file: 'blog/home.md'
+        label: 'Landing Page'
+        name: 'home'
+        fields:
+          - {label: Slug, name: name, widget: string}
+          - {label: Title in Menu, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Order in Menu, name: order, widget: number, valueType: int}
+          - {label: Publish, name: publish, widget: boolean, default: false}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}]}
