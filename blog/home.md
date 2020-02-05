@@ -3,7 +3,7 @@ name: home
 title: Home
 description: This is the home Page content
 order: 1
-publish: true
+publish: false
 image: assets/images/uploads/guacamaya-logo-256x256.png
 heading: Guacamaya devs
 intro:
