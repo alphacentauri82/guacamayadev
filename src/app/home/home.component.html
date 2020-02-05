@@ -1,5 +1,15 @@
 <div class="home_page" *ngFor="let home of home_pipe$ | async ">
-<p>home works!</p>
-{{ home.name }}
+    <mat-card>
+        <mat-card-title>{{home.intro.heading}}</mat-card-title>
+        <mat-card-content>{{home.intro.description}}</mat-card-content>
+        <mat-card-actions>
+            <a mat-button [href]="home.episodes.channel" target="_blank">Youtube Channel</a>
+            <a mat-button [href]="home.twitter_feeds.link" target="_blank">Listen Us in Spotify</a>
+        </mat-card-actions>
+    </mat-card>
+
+    <h2>Sponsors</h2>
+    <!--Here goes the twitter feeds section--->
+    <!--End of twitter feeds section-->
 </div>
 <!--<app-blog></app-blog>-->

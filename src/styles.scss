@@ -21,4 +21,4 @@ $guacamaya-dark-app-theme: mat-dark-theme($guacamaya-dark-primary, $guacamaya-da
 
 /* Dark Theme */
 
-@include angular-material-theme($guacamaya-dark-app-theme);
+@include angular-material-theme($guacamaya-app-theme);
