@@ -24,7 +24,17 @@ export class AppComponent {
   //Sort elements by orders
   //Here you can filter the links by some pattern
   links$ = this.routerService.available$.pipe(
-    map(routeList => routeList.sort((a, b) => a.order - b.order))
+    map(routeList => routeList.sort((a, b) => a.order - b.order)),
+    map(routeList => {
+      let data = [];
+      routeList.forEach(element => {
+        data.push({route: element.route.replace(/\/blog/,''), title: element.title});
+      })
+      return data;
+    })
   );
-  constructor(public routerService: ScullyRoutesService ) {}
+
+  constructor(public routerService: ScullyRoutesService ) {
+  }
+  
 }

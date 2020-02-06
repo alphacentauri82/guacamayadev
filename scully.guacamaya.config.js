@@ -3,7 +3,7 @@ exports.config = {
   projectName: "guacamaya",
   outDir: './dist/static',
   routes: {
-    '/:slug': {
+    '/blog/:slug': {
       type: 'contentFolder',
       slug: {
         folder: "./blog"
