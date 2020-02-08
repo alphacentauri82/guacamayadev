@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ScullyRoutesService } from '@scullyio/ng-lib'
 import { map } from 'rxjs/operators';
 import { useAnimation, transition, trigger, style, animate, state } from '@angular/animations';
+import * as M from "materialize-css/dist/js/materialize";
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,7 @@ import { useAnimation, transition, trigger, style, animate, state } from '@angul
   ]
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'guacamaya';
   //Sort elements by orders
   //Here you can filter the links by some pattern
@@ -34,7 +35,15 @@ export class AppComponent {
     })
   );
 
-  constructor(public routerService: ScullyRoutesService ) {
+  constructor(public routerService: ScullyRoutesService) {}
+
+  ngOnInit(){
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, {});
+        var pelems = document.querySelectorAll('.parallax');
+        var pinstances = M.Parallax.init(pelems, {});
+      });
   }
   
 }

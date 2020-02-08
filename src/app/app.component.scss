@@ -14,28 +14,25 @@
     min-height:100vh;
 }
 
-.parallax {
-    /* The image used */
-    background-image: url("../assets/guacamaya-logo-h.png");
-  
-    /* Set a specific height */
-    height: 300px;
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 50%;
-    /*background-size: cover;*/
-    background-color: #37474f;
-
-}
-
 mat-toolbar.nav-bar{
     /*background:#37474f00;*/
     position: fixed;
 }
 
-header{
-    background-color: #37474f;
+header, .footer-copyright{
+    background-color: #1b1d1f;
+}
+
+.vertical-align{
+    vertical-align: middle;
+}
+.love{
+ color:#ab47bc;
+}
+footer nav{
+    box-shadow: none !important;
+}
+
+header nav{
+    background-color: #141618 !important;
 }

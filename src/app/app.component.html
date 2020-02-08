@@ -1,18 +1,46 @@
-<header>
-  <mat-toolbar color="primary" class="nav-bar">
-   <h1>Guacamaya Site</h1>
-   <span class="fill"></span>
-   <div class="menu-element" *ngFor="let route of links$ | async ">
-    <a mat-button [href]="[route.route]">{{route.title}}</a>
-   </div>
-  </mat-toolbar>
-  <div class="parallax"></div>
- </header>
- <div class="main-container" [@fadeAnimation]="'in'">
-  <router-outlet></router-outlet>
- </div>
- <footer>
-  <mat-toolbar color="primary">
-   <p>Made with <mat-icon aria-hidden="false" aria-label="love">favorite</mat-icon> by CodeON</p>
-  </mat-toolbar>
- </footer>
+<div class="container-fixed">
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><mat-icon aria-hidden="false" aria-label="love">menu</mat-icon></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li *ngFor="let route of links$ | async ">
+            <a [href]="[route.route]">{{route.title}}</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+      <li *ngFor="let route of links$ | async ">
+        <a [href]="[route.route]">{{route.title}}</a>
+      </li>
+    </ul>
+  </header>
+
+  <div class="container-fixed" [@fadeAnimation]="'in'">
+    <router-outlet></router-outlet>
+  </div>
+  
+  <footer class="page-footer light-green darken-1">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <nav class="light-green darken-1">
+            <div class="nav-wrapper">
+              <ul class="right hide-on-med-and-down">
+                <li *ngFor="let route of links$ | async ">
+                  <a [href]="[route.route]">{{route.title}}</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center-align">
+        Made with <mat-icon aria-hidden="false" aria-label="love" class="vertical-align love">favorite</mat-icon> by <img class="responsive-img vertical-align" src="../assets/codeON-light.png"/>
+      </div>
+    </div>
+  </footer>
+</div>

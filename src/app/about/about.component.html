@@ -1,14 +1,18 @@
-<div class="about_page" *ngFor="let about of about_pipe$ | async ">
+<section class="about_page container" *ngFor="let about of about_pipe$ | async ">
     <h1>{{ about.title }}</h1>
     <p>{{ about.intro }}</p>
-    <h2>Bios</h2>
-    <mat-card *ngFor="let bio of about.bios">
-        <mat-card-header>
-            <mat-card-title>{{ bio.name }}</mat-card-title>
-            <img mat-card-image [src]="bio.picture"/>
-            <mat-card-content>
-                <p>{{ bio.resume}}</p>
-            </mat-card-content>
-        </mat-card-header>
-    </mat-card>
-</div>
+    <h2>{{ about.heading }}</h2>
+    <div class="row">
+        <div class="col s12 m6">
+          <div class="card" *ngFor="let bio of about.bios">
+            <div class="card-image">
+              <img [src]="bio.picture">
+              <span class="card-title">{{ bio.name }}</span>
+            </div>
+            <div class="card-content">
+              <p>{{ bio.resume}}</p>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>

@@ -1,15 +1,19 @@
-<div class="home_page" *ngFor="let home of home_pipe$ | async ">
-    <mat-card>
-        <mat-card-title>{{home.intro.heading}}</mat-card-title>
-        <mat-card-content>{{home.intro.description}}</mat-card-content>
-        <mat-card-actions>
-            <a mat-button [href]="home.episodes.channel" target="_blank">Youtube Channel</a>
-            <a mat-button [href]="home.twitter_feeds.link" target="_blank">Listen Us in Spotify</a>
-        </mat-card-actions>
-    </mat-card>
+<section class="home_page container-fixed" *ngFor="let home of home_pipe$ | async ">
+    <!--<div class="parallax-container">
+        <div class="parallax"><img src="../assets/code-time.jpg"></div>
+    </div>-->
 
-    <h2>Sponsors</h2>
-    <!--Here goes the twitter feeds section--->
-    <!--End of twitter feeds section-->
-</div>
+    <div class="container-fixed center-align header-home">
+      <a href="#" class="brand-logo"><img class="responsive-img guacamaya" src="../assets/guacamaya-logo-h.png"/></a>
+      <p class="white-text container">{{home.intro.description}}</p><br/>
+      <a [href]="home.episodes.channel" class="waves-effect waves-light btn">Youtube Channel</a>&nbsp;&nbsp;
+      <a [href]="home.twitter_feeds.link" target="_blank" class="waves-effect waves-light btn">Listen Us in Spotify</a><br/>
+    </div>
+
+    <div class="container home-container">
+     <h2>Sponsors</h2>
+     <!--Here goes the twitter feeds section--->
+     <!--End of twitter feeds section-->
+    </div>
+</section>
 <!--<app-blog></app-blog>-->
