@@ -2,6 +2,8 @@ backend:
   name: gitlab
   branch: master
   repo: rm82dc/guacamayadev
+  auth_type: implicit
+  app_id: c9d2710d1f2631dc5a9d394f43c72993af3c28291e6469c514989fe8d566a62f
 
 media_folder: 'src/assets/images/uploads'
 public_folder: 'assets/images/uploads'

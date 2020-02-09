@@ -1,0 +1,6 @@
+<div *ngFor="let video of videos">
+    <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank"><img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="..."></a>
+</div>
+
+<a *ngIf="prev!==''" [href]="prev">Previous episodes</a>
+<a *ngIf="next!==''" [href]="next">Next episodes</a>

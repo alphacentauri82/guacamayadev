@@ -131,5 +131,8 @@
       }
     }
   },
-  "defaultProject": "guacamaya"
+  "defaultProject": "guacamaya",
+  "cli": {
+    "analytics": "4b819d8d-e1dc-496d-8ae3-e88ab8f35f18"
+  }
 }
