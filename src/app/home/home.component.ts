@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   home_pipe$ = this.routerService.available$.pipe(
     map(routeList => routeList.filter((route) => {
-       console.log(route);
+       //console.log(route);
        return route.name == "home";
       }) 
     )

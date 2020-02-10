@@ -5,5 +5,6 @@
 <a *ngIf="prev!==''" [href]="prev">Previous episodes</a>
 <a *ngIf="next!==''" [href]="next">Next episodes</a>-->
 <section class="videos_page container">
-  <app-youtube channel="UC7WVhpS_lwJot0DBaEnIccg" items="10"></app-youtube>
+  <h1>{{ videos.title }}</h1>
+  <app-youtube channel="UC7WVhpS_lwJot0DBaEnIccg" items="10" showPagination="yes"></app-youtube>
 </section>

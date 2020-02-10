@@ -22,6 +22,10 @@ export class YoutubeComponent implements OnInit {
   @Input()
   items: string;
 
+  @Input()
+  showPagination: string;
+
+
   private unsubscribe$: Observable<void> = new Observable();
 
   constructor(private youTubeService: YoutubeService, private route: ActivatedRoute) { }

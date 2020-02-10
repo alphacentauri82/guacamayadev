@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { YoutubeService } from '../youtube.service';
-import { takeUntil } from 'rxjs/operators';
+import { takeUntil, map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { ScullyRoutesService } from '@scullyio/ng-lib'
 
 @Component({
   selector: 'app-videos',
@@ -11,16 +12,25 @@ import { Observable } from 'rxjs';
 })
 export class VideosComponent implements OnInit {
 
-  videos: any;
+  /*videos: any;
   next: string = "";
-  prev: string = "";
+  prev: string = "";*/
 
-  private unsubscribe$: Observable<void> = new Observable();
+  videos: any;
 
-  constructor(private youTubeService: YoutubeService, private route: ActivatedRoute) { }
+  constructor(public routerService: ScullyRoutesService) { }
 
   ngOnInit(): void {
-    this.videos = [];
+
+    this.videos = {};
+
+    this.routerService.available$.pipe(
+      map(routeList => routeList.filter((routerItem) => { return routerItem.route.indexOf("blog/videos") != -1 }))
+    ).subscribe(list => {
+      this.videos = list[0];
+    });
+
+    /*this.videos = [];
     this.route.queryParams.subscribe(params => {
 
       let options = {channelId: "UC7WVhpS_lwJot0DBaEnIccg", maxResults: 10};
@@ -38,7 +48,7 @@ export class VideosComponent implements OnInit {
             this.videos.push(item);
           }
       });
-    });
+    });*/
   }
 
 }

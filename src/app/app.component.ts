@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ScullyRoutesService } from '@scullyio/ng-lib'
-import { map } from 'rxjs/operators';
+import { map, filter } from 'rxjs/operators';
 import { useAnimation, transition, trigger, style, animate, state } from '@angular/animations';
 import * as M from "materialize-css/dist/js/materialize";
 
@@ -22,10 +22,12 @@ import * as M from "materialize-css/dist/js/materialize";
 
 export class AppComponent implements OnInit{
   title = 'guacamaya';
+  isHome: string = "no";
   //Sort elements by orders
   //Here you can filter the links by some pattern
   links$ = this.routerService.available$.pipe(
     map(routeList => routeList.sort((a, b) => a.order - b.order)),
+    map(routeList => routeList.filter((routerItem) => { return routerItem.route.indexOf("blog") != -1 })), 
     map(routeList => {
       let data = [];
       routeList.forEach(element => {
@@ -38,6 +40,9 @@ export class AppComponent implements OnInit{
   constructor(public routerService: ScullyRoutesService) {}
 
   ngOnInit(){
+      console.log(window.location.href);
+      if(window.location.href.indexOf('home')!==-1)
+        this.isHome = "yes";
       document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.sidenav');
         var instances = M.Sidenav.init(elems, {});

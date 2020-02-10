@@ -8,11 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import {
-  MatToolbarModule,
-  MatIconModule,
-  MatCardModule,
-  MatButtonModule,
-  MatProgressSpinnerModule
+  MatIconModule
  } from '@angular/material';
 
 @NgModule({
@@ -25,11 +21,7 @@ import {
     HttpClientModule,
     ScullyLibModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
-    MatButtonModule,
-    MatProgressSpinnerModule
+    MatIconModule
   ],
   exports: [
   ],

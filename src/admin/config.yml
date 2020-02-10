@@ -44,10 +44,11 @@ collections:
           - {label: Heading, name: heading, widget: string}
           - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}]}
           - {label: Sponsors, name: sponsors, widget: list, fields: [{label: Name, name: sponsor_name, widget: string}, {label: Image, name: sponsor_image, widget: image}]}
-          - {label: Twitter Feeds, name: twitter_feeds, widget: object, fields: [{label: Section Name, name: section_name, widget: string}, {label: Link, name: link, widget: string},{label: Feeds, name: feeds, widget: number, valueType: int}]}
-          - {label: Youtube Episodes, name: episodes, widget: object, fields: [{label: Section Name, name: section_name, widget: string}, {label: Channel url, name: channel, widget: string}, {label: Episodes, name: episodes, widget: number, valueType: int}]}
+          - {label: Twitter Feeds Section, name: twitter_feeds, widget: object, fields: [{label: Section Name, name: section_name, widget: string}, {label: Link, name: link, widget: string},{label: Feeds, name: feeds, widget: number, valueType: int}]}
+          - {label: Youtube Episodes Section, name: episodes, widget: object, fields: [{label: Section Name, name: section_name, widget: string}, {label: Channel Id, name: channel, widget: string}, {label: Episodes, name: episodes, widget: number, valueType: int}]}
+          - {label: Spotify Channel Section, name: spotify_channel, widget: string}
       - file: 'blog/about.md'
-        label: 'About Section'
+        label: 'About Page'
         name: 'about'
         fields: 
           - {label: Slug, name: name, widget: string}
@@ -59,3 +60,23 @@ collections:
           - {label: Heading, name: heading, widget: string}
           - {label: Intro, name: intro, widget: text}
           - {label: Bios, name: bios, widget: list, fields: [{label: Name, name: name, widget: string}, {label: Resume, name: resume, widget: text},{label: Picture, name: picture, widget: image}]}
+      - file: 'blog/videos.md'
+        label: 'Episodes Page'
+        name: 'videos'
+        fields: 
+          - {label: Slug, name: name, widget: string}
+          - {label: Title in Menu, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Order in Menu, name: order, widget: number, valueType: int}
+          - {label: Publish, name: publish, widget: boolean, default: false}
+          - {label: Channel Id, name: channel, widget: string}
+          - {label: Episodes, name: episodes, widget: number, valueType: int}
+      - file: 'blog/contact.md'
+        label: 'Contact Page'
+        name: 'contact'
+        fields:
+          - {label: Slug, name: name, widget: string}
+          - {label: Title in Menu, name: title, widget: string}
+          - {label: Description, name: description, widget: text}
+          - {label: Order in Menu, name: order, widget: number, valueType: int}
+          - {label: Publish, name: publish, widget: boolean, default: false}

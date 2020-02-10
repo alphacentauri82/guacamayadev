@@ -14,7 +14,9 @@
   </div>
 </div>
 
-<ul class="pagination">
-    <li *ngIf="prev!==''" class="waves-effect"><a [href]="prev">Previous episodes</a></li>
-    <li *ngIf="next!==''" class="waves-effect"><a [href]="next">Next episodes</a></li>
+<ul class="pagination center-align" *ngIf="showPagination=='yes'">
+    <li *ngIf="prev==''" class="waves-effect"><a class="btn disabled"><mat-icon aria-hidden="false" aria-label="send" class="vertical-align love">keyboard_arrow_left</mat-icon> Previous episodes</a></li>
+    <li *ngIf="prev!==''" class="waves-effect"><a [href]="prev" class="btn orange white-text"><mat-icon aria-hidden="false" aria-label="send" class="vertical-align love">keyboard_arrow_left</mat-icon> Previous episodes</a></li>
+    <li *ngIf="next!==''" class="waves-effect"><a [href]="next" class="btn orange white-text">Next episodes <mat-icon aria-hidden="false" aria-label="send" class="vertical-align love">keyboard_arrow_right</mat-icon></a></li>
+    <li *ngIf="next==''" class="waves-effect"><a class="btn disabled">Next episodes <mat-icon aria-hidden="false" aria-label="send" class="vertical-align love">keyboard_arrow_right</mat-icon></a></li>
 </ul>

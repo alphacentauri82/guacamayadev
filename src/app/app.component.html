@@ -2,6 +2,7 @@
   <header>
     <nav>
       <div class="nav-wrapper">
+        <div class="container"><a *ngIf="isHome=='no'" href="/home" class="brand-logo"><img src="../assets/guacamaya-icon-h.png"/></a></div>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><mat-icon aria-hidden="false" aria-label="love">menu</mat-icon></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li *ngFor="let route of links$ | async ">
@@ -24,10 +25,10 @@
   <footer class="page-footer light-green darken-1">
     <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col s12">
           <nav class="light-green darken-1">
             <div class="nav-wrapper">
-              <ul class="right hide-on-med-and-down">
+              <ul class="centered-nav hide-on-med-and-down">
                 <li *ngFor="let route of links$ | async ">
                   <a [href]="[route.route]">{{route.title}}</a>
                 </li>
