@@ -23,6 +23,7 @@ intro:
     con cobertura "casi en vivo" de eventos relevantes tal como JS Conf, Google
     Next, Google I/O, NG Conf, Vue Conf y muchos otros!!
   heading: Resume
+sponsor_message: Conviértete en nuestro sponsor
 sponsors: []
 twitter_feeds:
   feeds: 3
