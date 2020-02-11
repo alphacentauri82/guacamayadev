@@ -1,10 +1,4 @@
-<!--<div *ngFor="let video of videos">
-    <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank"><img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="..."></a>
-</div>
-
-<a *ngIf="prev!==''" [href]="prev">Previous episodes</a>
-<a *ngIf="next!==''" [href]="next">Next episodes</a>-->
-<section class="videos_page container">
-  <h1>{{ videos.title }}</h1>
-  <app-youtube channel="{{ home.episodes.channel }}" items="10" showPagination="yes"></app-youtube>
+<section class="videos_page container" *ngFor="let episode of video_pipe$ | async ">
+  <h1>{{ episode.title }}</h1>
+  <app-youtube channel="{{ episode.channel }}" items="{{ episode.episodes }}" showPagination="yes"></app-youtube>
 </section>
