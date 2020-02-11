@@ -17,17 +17,25 @@ export class VideosComponent implements OnInit {
   prev: string = "";*/
 
   videos: any;
+  home: any;
 
   constructor(public routerService: ScullyRoutesService) { }
 
   ngOnInit(): void {
 
     this.videos = {};
+    this.home = {};
 
     this.routerService.available$.pipe(
       map(routeList => routeList.filter((routerItem) => { return routerItem.route.indexOf("blog/videos") != -1 }))
     ).subscribe(list => {
       this.videos = list[0];
+    });
+
+    this.routerService.available$.pipe(
+      map(routeList => routeList.filter((routerItem) => { return routerItem.route.indexOf("blog/home") != -1 }))
+    ).subscribe(list => {
+      this.home = list[0];
     });
 
     /*this.videos = [];

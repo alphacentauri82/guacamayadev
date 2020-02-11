@@ -40,8 +40,8 @@ export class AppComponent implements OnInit{
   constructor(public routerService: ScullyRoutesService) {}
 
   ngOnInit(){
-      console.log(window.location.href);
-      if(window.location.href.indexOf('home')!==-1)
+      let pattern = /about|videos|contact/;
+      if(pattern.test(window.location.href) !==true )
         this.isHome = "yes";
       document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.sidenav');

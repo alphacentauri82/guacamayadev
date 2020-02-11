@@ -5,6 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 //import { BlogModule } from '../blog/blog.module'
 import { YoutubeModule } from '../youtube/youtube.module'
+import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 
 import {
   MatIconModule,
@@ -20,7 +21,8 @@ import {
     MatIconModule,
     MatCardModule,
     MatButtonModule,
-    YoutubeModule
+    YoutubeModule,
+    NgxTwitterTimelineModule
     //BlogModule
   ]
 })
