@@ -1,9 +1,10 @@
 ---
+name: videos
 title: Videos
 description: blog description
-publish: false
 order: 3
-name: videos
+publish: false
+channel: UC68u1qvt1B0SkF-q1EgP88Q
+episodes: 10
 ---
 
-# Videos
