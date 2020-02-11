@@ -31,7 +31,7 @@ bios:
 
       Skills: Java, Python, Node.js, GCP, AWS, Kubernetes, Automation and many
       more amazing tools.
-  - name: Member 1
+  - name: Andres Villanueva
     picture: assets/images/uploads/SuperDi_friend1.png
     resume: >-
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
@@ -42,7 +42,7 @@ bios:
       sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
       amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
       incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-  - name: Member 2
+  - name: Leonardo Graterol
     picture: assets/images/uploads/IMG-20200210-WA0003.jpg
     resume: >-
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
@@ -53,7 +53,7 @@ bios:
       sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
       amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
       incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-  - name: Member 3
+  - name: Mayra Rodriguez
     picture: assets/images/uploads/IMG-20200210-WA0004.jpg
     resume: >-
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
