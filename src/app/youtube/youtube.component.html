@@ -3,20 +3,73 @@
     <div class="col">
       <div class="card youtube-card">
         <div class="card-image">
-          <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank"><img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="..."></a>
+          <a
+            href="https://www.youtube.com/watch?v={{ video.id.videoId }}"
+            target="_blank"
+            ><img
+              [src]="video.snippet.thumbnails.medium.url"
+              class="card-img-top"
+              alt="..."
+          /></a>
         </div>
         <div class="card-content">
-          <span class="card-title"><a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">{{video.snippet.title}}</a></span>
-          <p>{{video.snippet.description}}</p>
+          <span class="card-title"
+            ><a
+              href="https://www.youtube.com/watch?v={{ video.id.videoId }}"
+              target="_blank"
+              >{{ video.snippet.title }}</a
+            ></span
+          >
+          <p>{{ video.snippet.description }}</p>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<ul class="pagination center-align" *ngIf="showPagination=='yes'">
-    <li *ngIf="prev==''" class="waves-effect"><a class="btn disabled hide-on-small-only"><mat-icon aria-hidden="false" aria-label="send" class="vertical-align love">keyboard_arrow_left</mat-icon> Previous episodes</a></li>
-    <li *ngIf="prev!==''" class="waves-effect"><a [href]="prev" class="btn orange white-text"><mat-icon aria-hidden="false" aria-label="send" class="vertical-align love">keyboard_arrow_left</mat-icon> Previous episodes</a></li>
-    <li *ngIf="next!==''" class="waves-effect"><a [href]="next" class="btn orange white-text">Next episodes <mat-icon aria-hidden="false" aria-label="send" class="vertical-align love">keyboard_arrow_right</mat-icon></a></li>
-    <li *ngIf="next==''" class="waves-effect"><a class="btn disabled hide-on-small-only">Next episodes <mat-icon aria-hidden="false" aria-label="send" class="vertical-align love">keyboard_arrow_right</mat-icon></a></li>
+<ul class="pagination center-align" *ngIf="showPagination == 'yes'">
+  <li *ngIf="prev == ''" class="waves-effect">
+    <a class="btn disabled hide-on-small-only"
+      ><mat-icon
+        aria-hidden="false"
+        aria-label="send"
+        class="vertical-align love"
+        >keyboard_arrow_left</mat-icon
+      >
+      Anterior</a
+    >
+  </li>
+  <li *ngIf="prev !== ''" class="waves-effect">
+    <a [href]="prev" class="btn orange white-text"
+      ><mat-icon
+        aria-hidden="false"
+        aria-label="send"
+        class="vertical-align love"
+        >keyboard_arrow_left</mat-icon
+      >
+      Anterior</a
+    >
+  </li>
+  <li *ngIf="next !== ''" class="waves-effect">
+    <a [href]="next" class="btn orange white-text"
+      >Siguiente
+      <mat-icon
+        aria-hidden="false"
+        aria-label="send"
+        class="vertical-align love"
+        >keyboard_arrow_right</mat-icon
+      ></a
+    >
+  </li>
+  <li *ngIf="next == ''" class="waves-effect">
+    <a class="btn disabled hide-on-small-only"
+      >Siguiente
+      <mat-icon
+        aria-hidden="false"
+        aria-label="send"
+        class="vertical-align love"
+        >keyboard_arrow_right</mat-icon
+      ></a
+    >
+  </li>
 </ul>

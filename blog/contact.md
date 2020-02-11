@@ -6,4 +6,4 @@ order: 5
 name: contact
 ---
 
-# Contact
+# Contacto
