@@ -8,27 +8,30 @@ image: assets/images/uploads/guacamaya-logo-256x256.png
 heading: Guacamaya devs
 intro:
   description: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Tecnología, tendencias, eventos del ecosistema tech a nivel mundial y algo
+    más desde cuatro perspectivas diferentes. Dos Guacamayas y Dos Guacamayos
+    nos dan sus insights, recomendaciones y el toque "poco" serio que le hace
+    falta al día a día. Estas cuatro "joyitas" se desempeñan en diferentes
+    especialidades dentro del ecosistema tecnológico en cuatro rincones
+    diferentes y distantes del mundo pero comparten algo que los une mas allá de
+    la programación: adivinaron?. SI!... Andrés Villanueva, Mayra Rodríguez,
+    Leonardo Graterol y Diana Rodríguez ostentan con mucho orgullo su bandera
+    Venezolana, las arepas y las vivencias de ser Venezolanxs en el exterior.
 
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Aparte de la entrega mensual de nuestro podcast, estaremos publicando micros
+    con cobertura "casi en vivo" de eventos relevantes tal como JS Conf, Google
+    Next, Google I/O, NG Conf, Vue Conf y muchos otros!!
   heading: Resume
 sponsors: []
 twitter_feeds:
+  feeds: 3
   link: 'https://twitter.com/DevGuacamaya'
   section_name: Twitter Feeds
 episodes:
-  channel: 'https://www.youtube.com/channel/UC68u1qvt1B0SkF-q1EgP88Q'
+  channel: UC68u1qvt1B0SkF-q1EgP88Q
+  episodes: 3
   section_name: Episodes
+spotify_channel: 'https://open.spotify.com/show/5lY4b5PGOvMuOYOjOVEcb9'
 ---
 
