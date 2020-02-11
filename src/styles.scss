@@ -1,7 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
 
+@font-face {
+    src: url(assets/fonts/Quicksand-Light.ttf);
+    font-family: quicksand-light;
+}
+
+@font-face {
+    src: url(assets/fonts/Quicksand-Regular.ttf);
+    font-family: quicksand-regular;
+}
+
+@font-face {
+    src: url(assets/fonts/Quicksand-Medium.ttf);
+    font-family: quicksand-medium;
+}
+
+@font-face {
+    src: url(assets/fonts/Quicksand-Bold.ttf);
+    font-family: quicksand-bold;
+}
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: quicksand-light, Roboto, "Helvetica Neue", sans-serif; }
+h1{
+    font-family: quicksand-bold;
+}
+h2{
+    font-family: quicksand-medium;
+}
+a.btn-large{
+    font-family: quicksand-medium;
+}
 
 @import '~@angular/material/_theming';
 @include mat-core();

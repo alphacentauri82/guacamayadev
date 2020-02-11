@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class YoutubeService {
 
-  key: string = "AIzaSyCUkGSRqY1kipQ7V_PI-pITrG2wKqF-5h0"
+  key: string = "AIzaSyDz6MtZk1fIPlaBuifbeVbrFDGMVUAedvI"
 
   constructor(public http: HttpClient) { }
 
