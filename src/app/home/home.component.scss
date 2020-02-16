@@ -1,25 +1,57 @@
-.header-home{
- background-color: #1b1d1f;
- padding-bottom: 15px;
+.header-home {
+    /*background-color: #1b1d1f #162f4e;*/
+    background-color: #ffffff;
+    /*padding-bottom: 15px;*/
 }
 
-.guacamaya{
+
+/*Comment the guacamaya block and media query block if you want guacamaya image responsive and full width*/
+
+.guacamaya {
     max-width: 500px;
+    margin-top: 40px;
 }
 
-.vertical-align{
+@media only screen and (max-width: 500px) {
+    .guacamaya {
+        max-width: 300px !important;
+    }
+}
+
+.vertical-align {
     vertical-align: middle;
 }
 
-.custom-icon{
+.custom-icon {
     width: 32px !important;
 }
 
-.feedback{
-    background: #d5d5d5;
+.feedback {
+    // background: #d5d5d5;
     padding-top: 15px;
 }
 
 .custom-button {
     margin-bottom: 5px;
+}
+
+.button-header-section {
+    /*background: #1b1d1f;*/
+    background-color: #f5f5f5;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.text-header-section {
+    text-align: justify;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0px;
+}
+
+.container-flag {
+    background: url(../../assets/feed.png);
 }

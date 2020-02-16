@@ -7,12 +7,15 @@ import {
   MatIconModule
  } from '@angular/material';
 
+ import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [ContactComponent],
   imports: [
     CommonModule,
     ContactRoutingModule,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule
   ]
 })
 export class ContactModule { }

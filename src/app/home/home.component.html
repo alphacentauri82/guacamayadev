@@ -1,70 +1,61 @@
-<section
-  class="home_page container-fixed"
-  *ngFor="let home of home_pipe$ | async"
->
-  <!--<div class="parallax-container">
+<section class="home_page container-fixed" *ngFor="let home of home_pipe$ | async">
+    <!--<div class="parallax-container">
         <div class="parallax"><img src="../assets/code-time.jpg"></div>
     </div>-->
 
-  <div class="container-fixed center-align header-home">
-    <a href="#" class="brand-logo"
-      ><img
-        class="responsive-img guacamaya"
-        src="../assets/guacamaya-logo-256x256.png"
-    /></a>
-    <p class="white-text container">{{ home.intro.description }}</p>
-    <br />
-    <a
-      [href]="home.episodes.channel"
-      class="waves-effect waves-light btn-large blue custom-button"
-      ><img
-        class="custom-icon vertical-align"
-        src="../assets/youtube_social_icon_red.png"
-      />
-      Canal de Youtube</a
-    >&nbsp;&nbsp;
-    <a
-      [href]="home.spotify_channel"
-      target="_blank"
-      class="waves-effect waves-light btn-large red custom-button"
-      ><img
-        class="custom-icon vertical-align"
-        src="../assets/Spotify_Icon_RGB_White64x64.png"
-      />
-      Escuchar en Spotify</a
-    ><br />
-  </div>
+    <div class="container-fixed center-align header-home">
+        <div class="row valign-wrapper">
+            <div class="col s12">
+                <a href="#" class="brand-logo"><img class="responsive-img guacamaya" src="../assets/guacamaya-logo-h.png" /></a>
+                <div class="row white no-margin-bottom">
+                    <div class="col m8 offset-m2 s10 offset-s1 text-header-section waves-ripple">
+                        <p class="Black-text">{{home.intro.description}} </p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row ">
+                    <div class="col s12 button-header-section center-align ">
+                        <a href="https://www.youtube.com/channel/{{home.episodes.channel}} " class="waves-effect waves-light btn-large  red darken-4 ">
+                            <img class="custom-icon vertical-align " src="../assets/youtube_social_icon_red.png " /> Canal de Youtube
+                        </a>&nbsp;&nbsp;
 
-  <div class="container home-container">
-    <div class="row">
-      <div class="sponsor col s12">
-        <h2>Sponsors</h2>
-        <div class="row">
-          <div class="col s12 center-align">
-            <a class="btn-large light-green darken-1" href="/contact">{{
+                        <a [href]="home.spotify_channel " target="_blank " class="waves-effect waves-light btn-large  green darken-1 ">
+                            <img class="custom-icon vertical-align " src="../assets/Spotify_Icon_RGB_White64x64.png " /> Escuchar en Spotify
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container home-container ">
+        <div class="row ">
+            <div class="sponsor col s12 ">
+                <!--<h2>Sponsors</h2>-->
+                <div class="row ">
+                    <div class="col s12 center-align ">
+                        <a class="btn-large waves-effect waves-teal btn-flat " margin-top="20px " href="/contact ">{{
               home.sponsor_message
             }}</a>
-          </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+        <hr>
+        <h3>Twitter</h3>
+        <!--<h2>Ultimos episodios</h2>
+     <app-youtube channel="{{ home.episodes.channel }} " items="{{ home.episodes.episodes }} " showPagination="no "></app-youtube>-->
     </div>
-    <!--Here goes the twitter feeds section--->
-    <h3>Twitter</h3>
-    <div class="row feedback">
-      <div class="col m8 s12 offset-m2 center-align">
-        <ngx-twitter-timeline
-          [data]="{ sourceType: 'url', url: home.twitter_feeds.link }"
-          [opts]="{ tweetLimit: home.twitter_feeds.feeds }"
-        ></ngx-twitter-timeline>
-      </div>
+    <div class="container-flag ">
+        <div class="container home-container ">
+            <div class="row feedback ">
+                <div class="col m8 s12 offset-m2 center-align ">
+                    <ngx-twitter-timeline [data]="{ sourceType: 'url', url: home.twitter_feeds.link } " [opts]="{ tweetLimit: home.twitter_feeds.feeds } "></ngx-twitter-timeline>
+                </div>
+            </div>
+        </div>
     </div>
-    <!--End of twitter feeds section-->
-    <h3>Ultimos episodios</h3>
-    <app-youtube
-      channel="{{ home.episodes.channel }}"
-      items="{{ home.episodes.episodes }}"
-      showPagination="no"
-    ></app-youtube>
-  </div>
 </section>
 <!--<app-blog></app-blog>-->

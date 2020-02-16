@@ -1,47 +1,52 @@
 <div class="container-fixed">
-  <header>
-    <nav>
-      <div class="nav-wrapper">
-        <div class="container"><a *ngIf="isHome=='no'" href="/home" class="brand-logo"><img src="../assets/guacamaya-icon-h.png"/></a></div>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><mat-icon aria-hidden="false" aria-label="love">menu</mat-icon></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li *ngFor="let route of links$ | async ">
-            <a [href]="[route.route]">{{route.title}}</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <ul class="sidenav" id="mobile-demo">
-      <li *ngFor="let route of links$ | async ">
-        <a [href]="[route.route]">{{route.title}}</a>
-      </li>
-    </ul>
-  </header>
-
-  <div class="container-fixed" [@fadeAnimation]="'in'">
-    <router-outlet></router-outlet>
-  </div>
-  
-  <footer class="page-footer light-green darken-1">
-    <div class="container">
-      <div class="row">
-        <div class="col s12">
-          <nav class="light-green darken-1">
-            <div class="nav-wrapper">
-              <ul class="centered-nav hide-on-med-and-down">
-                <li *ngFor="let route of links$ | async ">
-                  <a [href]="[route.route]">{{route.title}}</a>
-                </li>
-              </ul>
+    <header>
+        <nav>
+            <div class="nav-wrapper header-navbar">
+                <div class="container">
+                    <a *ngIf="isHome=='no'" href="/home" class="brand-logo"><img src="../assets/guacamaya-icon-h.png" /></a>
+                </div>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                    <mat-icon aria-hidden="false" aria-label="love">menu</mat-icon>
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li *ngFor="let route of links$ | async ">
+                        <a [href]="[route.route]">{{route.title}}</a>
+                    </li>
+                </ul>
             </div>
-          </nav>
+        </nav>
+        <ul class="sidenav" id="mobile-demo">
+            <li *ngFor="let route of links$ | async ">
+                <a [href]="[route.route]">{{route.title}}</a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="container-fixed" [@fadeAnimation]="'in'">
+        <router-outlet></router-outlet>
+    </div>
+
+    <footer class="page-footer cyan darken-1">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <nav class="cyan darken-1">
+                        <div class="nav-wrapper">
+                            <ul class="centered-nav hide-on-med-and-down">
+                                <li *ngFor="let route of links$ | async ">
+                                    <a class="white-text footer-menu-item" [href]="[route.route]">{{route.title}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container center-align">
-        Made with <mat-icon aria-hidden="false" aria-label="love" class="vertical-align love">favorite</mat-icon> by <img class="responsive-img vertical-align" src="../assets/codeON-light.png"/>
-      </div>
-    </div>
-  </footer>
+        <div class="footer-copyright">
+            <div class=" white-text container center-align">
+                Made with
+                <mat-icon aria-hidden="false" aria-label="love" class="vertical-align love">favorite</mat-icon> by <img class="responsive-img vertical-align" src="../assets/codeON-light.png" />
+            </div>
+        </div>
+    </footer>
 </div>
