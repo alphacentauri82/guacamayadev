@@ -6,9 +6,16 @@
     </div>
   </div>
   <div class="row">
-    <form [formGroup]='contactForm' class="col s12" id="contact-form" name="contact" method="POST" (ngSubmit)="onSubmit()">
+    <form
+      [formGroup]="contactForm"
+      class="col s12"
+      id="contact-form"
+      name="contact"
+      method="POST"
+      (ngSubmit)="onSubmit()"
+    >
       <input type="hidden" name="form-name" id="form-name" value="contact" />
-      <input name="bot-field" class="hide"/>
+      <input name="bot-field" class="hide" />
       <div class="row">
         <div class="input-field col s12">
           <input

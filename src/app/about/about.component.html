@@ -2,7 +2,7 @@
     <h1>{{ about.title }}</h1>
     <p>{{ about.intro }}</p>
     <h2>{{ about.heading }}</h2>
-    <div class="row">
+    <div class="row cards">
         <div class="col s12 m6" *ngFor="let bio of about.bios">
           <div class="card">
             <div class="card-image">
@@ -10,7 +10,7 @@
               <span class="about-card-title card-title white-text orange">{{ bio.name }}</span>
             </div>
             <div class="card-content">
-              <p>{{ bio.resume}}</p>
+              <p [innerHTML]=bio.resume></p>
             </div>
           </div>
         </div>
