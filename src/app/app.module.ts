@@ -22,7 +22,7 @@ import {
     AppRoutingModule,
     HttpClientModule,
     ScullyLibModule,
-    BrowserAnimationsModule,
+    // BrowserAnimationsModule,
     MatIconModule
   ],
   exports: [
